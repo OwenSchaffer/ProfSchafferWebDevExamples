@@ -1,0 +1,29 @@
+<!-- Source: https://www.w3schools.com/css/css_rwd_images.asp -->
+
+<!-- Using width: 100%, the image can be scaled up to be larger than its original size. 
+    A better solution, in many cases, will be to use the max-width property instead. -->
+
+<!-- If the max-width property is set to 100%, the image will scale down if it has to,
+     but never scale up to be larger than its original size:
+ -->
+
+ <!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+img {
+  max-width: 100%;
+  height: auto;
+}
+</style>
+</head>
+<body>
+
+<img src="img_chania.jpg" width="460" height="345">
+<p>Resize the browser window to see how the image will scale when the width is less than 460px.</p>
+
+</body>
+</html>
+
+

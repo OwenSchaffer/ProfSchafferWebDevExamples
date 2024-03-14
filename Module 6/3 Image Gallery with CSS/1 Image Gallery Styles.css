@@ -1,0 +1,52 @@
+/* Reset default margin and padding */
+body, html {
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* Set background color */
+  body {
+    background-color: #f4f4f4;
+    font-family: Arial, sans-serif;
+    color: #333; /* Set font color */
+  }
+  
+  /* Style for the gallery container */
+  main {
+    display: grid; /* Use CSS Grid layout */
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Responsive grid layout */
+    grid-gap: 20px; /* Gap between grid items */
+    padding: 20px; /* Padding around the gallery */
+    max-width: 1200px; /* Maximum width of the gallery */
+    margin: 0 auto; /* Center the gallery horizontally */
+  }
+  
+  /* Style for each image in the gallery */
+  figure {
+    margin: 0; /* Remove default margin */
+  }
+  
+  figure img {
+    width: 100%; /* Make images fill their parent container */
+    border-radius: 5px; /* Add rounded corners to images */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add drop shadow to images */
+    transition: transform 0.3s ease; /* Add transition for hover effect */
+  }
+  
+  /* Hover effect for images */
+  figure img:hover {
+    transform: scale(1.05); /* Enlarge image slightly on hover */
+  }
+  
+  /* Style for the caption below each image */
+  figcaption {
+    text-align: center; /* Center-align text */
+    margin-top: 10px; /* Add space between image and caption */
+  }
+  
+  /* Style for HTML headings */
+  h1, h2 {
+    text-align: center; /* Center-align headings */
+    margin-bottom: 20px; /* Add space below headings */
+  }
+  

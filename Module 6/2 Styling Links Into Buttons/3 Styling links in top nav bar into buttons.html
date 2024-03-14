@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Top Navigation Bar</title>
+<style>
+  /* Style for the navigation bar */
+  nav {
+    background-color: #333; /* Background color for the navigation bar */
+    overflow: hidden; /* Clear floats */
+    position: fixed; /* Fix the navigation bar position on the viewport */
+    top: 0; /* Position the navigation bar at the top of the viewport */
+    left: 0; /* Position the navigation bar flush with the left edge of the viewport */
+    width: 100%; /* Set the width of the navigation bar to 100% of the viewport width */
+  }
+
+  /* Style for the navigation links */
+  nav a {
+    float: left; /* Float the links to the left */
+    display: block; /* Display links as block elements */
+    color: #fff; /* Text color */
+    text-align: center; /* Center-align text */
+    padding: 14px 20px; /* Add padding */
+    text-decoration: none; /* Remove underline */
+    font-size: 16px; /* Set font size */
+    transition: background-color 0.3s; /* Add transition for hover effect */
+  }
+
+  /* Hover effect for navigation links */
+  nav a:hover {
+    background-color: #555; /* Darker color on hover */
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="#">Home</a>
+  <a href="#">About</a>
+  <a href="#">Gallery</a>
+  <a href="#">Contact</a>
+</nav>
+
+</body>
+</html>

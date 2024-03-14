@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Styled Link as Button</title>
+<style>
+  /* Define styles for the button */
+  .button {
+    display: inline-block; /* Display the link as a block element */
+    padding: 10px 20px; /* Add padding to create space around the text */
+    background-color: #ff0000; /* Button color */
+    color: #fff; /* Text color */
+    text-decoration: none; /* Remove underline */
+    border: none; /* Remove border */
+    border-radius: 5px; /* Add rounded corners */
+    cursor: pointer; /* Change cursor to pointer on hover */
+    font-size: 16px; /* Set font size */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Add drop shadow */
+  }
+
+  /* Define styles for hover effect */
+  .button:hover {
+    background-color: #640000; /* Darker color on hover */
+  }
+
+  /* Define styles for pressed effect */
+  .button:active {
+    transform: translateY(1px); /* Move button down slightly when pressed */
+    box-shadow: none; /* Remove drop shadow when pressed */
+  }
+</style>
+</head>
+<body>
+
+<h1>The button links to this second page</h1>
+
+<a href="1 Styling a Link Into a Button.html" class="button">Go Back</a>
+
+</body>
+</html>

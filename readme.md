@@ -8,3 +8,4 @@ Sources / References:
 https://www.w3schools.com/html/html_examples.asp
 https://www.w3schools.com/css/css_examples.asp
 https://gridbyexample.com/examples/
+https://github.com/brenopolanski/html5-video-webvtt-example/

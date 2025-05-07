@@ -57,6 +57,14 @@ nav a:hover {
   color: #007acc;
 }
 
+/* Current page styling: non-clickable, distinct color */
+nav .current {
+  font-weight: bold;
+  color: #1b00cc;
+  cursor: default;
+  pointer-events: none;
+}
+
 main {
   grid-area: main;
   background: #eee;

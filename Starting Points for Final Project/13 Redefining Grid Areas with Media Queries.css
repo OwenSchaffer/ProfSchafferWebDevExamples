@@ -1,0 +1,143 @@
+/* Adapted from: https://gridbyexample.com/examples/example13/ 
+   and https://www.w3schools.com/css/css_navbar.asp
+*/
+
+
+body {
+    margin: 40px;
+  }
+  
+/* Setting the grid-area names */
+  nav {
+    grid-area: nav;
+  }
+
+  aside {
+      grid-area: sidebar;
+    }
+  
+    article {
+      grid-area: sidebar2;
+    }
+  
+    .content {
+      grid-area: content;
+    }
+  
+    .header {
+      grid-area: header;
+    }
+  
+    .footer {
+      grid-area: footer;
+    }
+  
+    .wrapper {
+      background-color: #fff;
+      color: #444;
+    }
+  
+    /* Styles for Mobile
+    This is the default so no @media is needed */
+    .wrapper {
+      display: grid;
+      grid-gap: 1em;
+      grid-template-areas:
+       "header"
+       "nav"
+       "sidebar"
+       "content"
+       "sidebar2"
+       "footer"
+    }
+  
+    /* Styles for Tablet in Portrait Orientation */
+    @media only screen and (min-width: 481px)  {
+    .wrapper {
+  
+      grid-template-columns: 20% auto;
+      grid-template-areas:
+      "header   header"
+      "nav      nav"
+      "sidebar  content"
+      "sidebar2 sidebar2"
+      "footer   footer";
+    }
+    }
+  
+    /* Styles for Tablet in Landscape Orientation and Small Desktop Monitors */
+    @media only screen and (min-width: 769px)   {
+      .wrapper {
+        grid-gap: 20px;
+        grid-template-columns: 120px auto 120px;
+        grid-template-areas:
+        "header  header  header"
+        "nav     nav     nav"
+        "sidebar content sidebar2"
+        "footer  footer  footer";
+        max-width: 600px;
+      }
+
+      /* Optional - Styles for large desktop monitors */
+      @media only screen and (min-width: 1280px)   {
+        .wrapper {
+          grid-gap: 20px;
+          grid-template-columns: 1fr 2fr 1fr;
+          grid-template-areas:
+          "header  header  header"
+          "nav     nav     nav"
+          "sidebar content sidebar2"
+          "footer  footer  footer";
+          max-width: 600px;
+        }
+    }
+  
+  .box {
+    background-color: #444;
+    color: #fff;
+    border-radius: 5px;
+    padding: 10px;
+    font-size: 150%; 
+  }
+  
+  .header,
+  .footer {
+    background-color: #999;
+  }
+  
+  .sidebar2 {
+    background-color: #ccc;
+    color: #444;
+  }
+
+  /* Styles for the navbar */
+  ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+    position: fixed;
+    top: 0;
+    width: 100%;
+  }
+  
+  li {
+    float: left;
+  }
+  
+  li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+  
+  li a:hover:not(.active) {
+    background-color: #111;
+  }
+  
+  .active {
+    background-color: #04AA6D;
+  }

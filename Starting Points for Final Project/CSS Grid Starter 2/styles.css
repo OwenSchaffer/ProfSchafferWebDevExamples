@@ -1,0 +1,189 @@
+/* =================================================
+   Global Reset & Base Styles
+================================================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+    padding: 1rem;
+    display: grid;
+    gap: 1rem;
+    /* Overall Page Layout (Mobile-first) */
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "header"
+      "nav"
+      "main"
+      "aside"
+      "article"
+      "footer";
+  }
+  
+  /* =================================================
+     Overall Page Layout Styles
+     (Header, Nav, Aside, Article, Footer)
+  ================================================= */
+  header {
+    grid-area: header;
+    background: #f2f2f2;
+    padding: 1rem;
+  }
+  
+  nav {
+    grid-area: nav;
+    background: #ddd;
+    padding: 1rem;
+  }
+  
+  aside {
+    grid-area: aside;
+    background: #f5f5f5;
+    padding: 1rem;
+  }
+  
+  article {
+    grid-area: article;
+    background: #fcfcfc;
+    padding: 1rem;
+  }
+  
+  footer {
+    grid-area: footer;
+    background: #ddd;
+    padding: 1rem;
+    text-align: center;
+  }
+  
+  /* Navigation Styling */
+  nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: flex-end;
+  }
+  
+  nav li {
+    margin-left: 1.5rem;
+  }
+  
+  nav a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    transition: color 0.3s ease;
+  }
+  
+  nav a:hover {
+    color: #007acc;
+  }
+  
+  /* Current page styling: non-clickable, distinct color */
+  nav .current {
+    font-weight: bold;
+    color: #1b00cc;
+    cursor: default;
+    pointer-events: none;
+  }
+  
+  /* =================================================
+     Overall Page Layout Media Queries
+  ================================================= */
+  
+  /* Tablet Portrait (min-width: 600px) */
+  @media (min-width: 600px) {
+    body {
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-areas:
+        "header nav"
+        "main main"
+        "aside article"
+        "footer footer";
+    }
+  }
+  
+  /* Tablet Landscape / Small Desktop (min-width: 900px) */
+  @media (min-width: 900px) {
+    body {
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-areas:
+        "header header nav"
+        "main main main"
+        "aside article article"
+        "footer footer footer";
+    }
+  }
+  
+  /* Large Desktop (min-width: 1200px) */
+  @media (min-width: 1200px) {
+    body {
+      grid-template-columns: repeat(4, 1fr);
+      grid-template-areas:
+        "header header header nav"
+        "aside main main article"
+        "footer footer footer footer";
+    }
+  }
+  
+  /* =================================================
+     Main Section Layout (Internal Grid)
+     This defines how the three sections within <main>
+     are arranged independently.
+  ================================================= */
+  main {
+    display: grid;
+    gap: 1rem;
+    /* Mobile: single column layout for the main sections */
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "section1"
+      "section2"
+      "section3";
+  }
+  
+  .section1 {
+    grid-area: section1;
+    background: #eef;
+    padding: 1rem;
+  }
+  
+  .section2 {
+    grid-area: section2;
+    background: #efe;
+    padding: 1rem;
+  }
+  
+  .section3 {
+    grid-area: section3;
+    background: #fee;
+    padding: 1rem;
+  }
+  
+  /* Main Section Layout Media Queries */
+  /* For larger viewports, arrange main sections side-by-side */
+  @media (min-width: 900px) {
+    main {
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-areas: "section1 section2 section3";
+    }
+  }
+  
+  /* =================================================
+     Gallery Page Overrides
+     (Only applies when the body has the .gallery-page class)
+  ================================================= */
+  .gallery-page main .section2 .gallery-grid {
+    display: grid;
+    gap: 10px;
+    /* Auto-fit images with a minimum width */
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  }
+  
+  .gallery-page main .section2 .gallery-grid img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+  

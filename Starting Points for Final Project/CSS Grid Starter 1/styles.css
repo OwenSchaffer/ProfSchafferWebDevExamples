@@ -1,0 +1,125 @@
+/* Reset some default spacing */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  padding: 1rem;
+  display: grid;
+  /* Mobile-first: single column layout */
+  grid-template-columns: 1fr;
+  grid-template-areas:
+    "header"
+    "nav"
+    "main"
+    "aside"
+    "section"
+    "article"
+    "footer";
+  gap: 1rem;
+}
+
+header {
+  grid-area: header;
+  background: #f2f2f2;
+  padding: 1rem;
+}
+
+nav {
+  grid-area: nav;
+  background: #ddd;
+  padding: 1rem;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: flex-end;
+}
+
+nav li {
+  margin-left: 1.5rem;
+}
+
+/* Navbar link style with transition */
+nav a {
+  text-decoration: none;
+  color: #333;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+/* Hover state changes the color */
+nav a:hover {
+  color: #007acc;
+}
+
+main {
+  grid-area: main;
+  background: #eee;
+  padding: 1rem;
+}
+
+aside {
+  grid-area: aside;
+  background: #f5f5f5;
+  padding: 1rem;
+}
+
+section {
+  grid-area: section;
+  background: #fafafa;
+  padding: 1rem;
+}
+
+article {
+  grid-area: article;
+  background: #fcfcfc;
+  padding: 1rem;
+}
+
+footer {
+  grid-area: footer;
+  background: #ddd;
+  padding: 1rem;
+  text-align: center;
+}
+
+/* Tablet Portrait: 2 columns (min-width: 600px) */
+@media (min-width: 600px) {
+  body {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas:
+      "header nav"
+      "main main"
+      "aside section"
+      "article article"
+      "footer footer";
+  }
+}
+
+/* Tablet Landscape / Small Desktop: 3 columns (min-width: 900px) */
+@media (min-width: 900px) {
+  body {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-areas:
+      "header header nav"
+      "main main main"
+      "aside section article"
+      "footer footer footer";
+  }
+}
+
+/* Large Desktop: 4 columns (min-width: 1200px) */
+@media (min-width: 1200px) {
+  body {
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-areas:
+      "header header header nav"
+      "aside main section article"
+      "footer footer footer footer";
+  }
+}

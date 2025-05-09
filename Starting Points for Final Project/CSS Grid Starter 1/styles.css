@@ -126,7 +126,7 @@ footer {
   body {
     grid-template-columns: repeat(4, 1fr);
     grid-template-areas:
-      "header header header nav"
+      "header nav nav nav"
       "aside main section article"
       "footer footer footer footer";
   }
